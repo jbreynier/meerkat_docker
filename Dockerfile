@@ -1,6 +1,6 @@
-### Modified from jemimalwh/trust4 ###
-
 FROM ubuntu:14.04
+LABEL maintainer="jbreynier@uchicago.edu"
+
 
 RUN apt-get update && \
     apt-get install -y build-essential \
