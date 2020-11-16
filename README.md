@@ -17,7 +17,7 @@ Github: https://github.com/guru-yang/Meerkat
 ## Example usage:
 
 Input data:
- * The Meerkat test dataset: http://compbio.med.harvard.edu/Meerkat/Meerkat.example.v2.tar.gz  
+ * Meerkat test dataset: http://compbio.med.harvard.edu/Meerkat/Meerkat.example.v2.tar.gz  
  * hg18 genome along with all required reference genome files:  
 ```bash
         hg18
@@ -25,7 +25,14 @@ Input data:
         ├── hg18.fa.fai
         ├── hg18_bwa_idx
         │   ├── hg18.fa
-        │   └── FIX THISSSSS
+        │   ├── hg18.fa.amb
+        │   ├── hg18.fa.ann
+        │   ├── hg18.fa.bwt
+        │   ├── hg18.fa.pac
+        │   ├── hg18.fa.rbwt
+        │   ├── hg18.fa.rpac
+        │   ├── hg18.fa.rsa
+        │   └── hg18.fa.sa
         ├── hg18_fasta
         │   └── hg18.fa
         ├── refGene_hg18_sorted.txt
