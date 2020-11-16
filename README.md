@@ -19,15 +19,33 @@ Github: https://github.com/guru-yang/Meerkat
 Input data:
  * The Meerkat test dataset: http://compbio.med.harvard.edu/Meerkat/Meerkat.example.v2.tar.gz  
  * hg18 genome along with all required reference genome files:  
-        hg18  
-        |-- hg18.2bit  
-        |-- hg18.fa.fai  
-        |-- hg18_bwa_idx  
-        |-- hg18_fasta  
-        |   |-- hg18.fa  
-        |   `-- hg18.fa.pac  
-        |-- refGene_hg18_sorted.txt  
-        `-- rmsk-hg18.txt  
+        Meerkat.example
+
+```bash
+├── Readme.txt
+├── bam
+│   ├── example.sorted.bam
+│   └── example.sorted.bam.bai
+├── headerfile
+└── outputs
+    ├── example.bp.info
+    ├── example.bp_reads
+    ├── example.clusters
+    ├── example.discord
+    ├── example.dre.log
+    ├── example.inter.refined.typ.sorted
+    ├── example.intra.refined.typ.sorted
+    ├── example.isinfo
+    ├── example.mp.inter.out
+    ├── example.mp.intra.out
+    ├── example.pdf
+    ├── example.pre.log
+    ├── example.sr.inter.filtered
+    ├── example.sr.inter.out
+    ├── example.sr.intra.filtered
+    ├── example.sr.intra.out
+    └── example.variants
+```
 
 `docker run --rm -v /path/to/Meerkat.example:/Meerkat.example -v /path/to/hg18:/hg18 jbreynier/meerkat:latest perl /usr/local/Meerkat/scripts/pre_process.pl -b /Meerkat.example/bam/example.sorted.bam -I /hg18/hg18_bwa_idx/hg18.fa -A /hg18/hg18.fa.fai -W /usr/local/bwa-0.6.2/ -S /usr/local/samtools-0.1.19/`  
 
