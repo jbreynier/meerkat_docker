@@ -42,7 +42,7 @@ RUN mkdir /usr/local/blat && \
 
 # Install Primer3
 RUN cd /usr/local/ && \
-    wget --retry-on-http-error=503 -t 30 --waitretry 5 https://sourceforge.net/projects/primer3/files/primer3/2.2.0-alpha/primer3-2.2.0-alpha.tar.gz && \
+    wget --tries=30 --waitretry=5 --retry-connrefused https://sourceforge.net/projects/primer3/files/primer3/2.2.0-alpha/primer3-2.2.0-alpha.tar.gz && \
     tar -xzf primer3-2.2.0-alpha.tar.gz && \
     cd primer3-2.2.0-alpha/src && \
     make all
